@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in html</title>
+</head>
+<body>
+    <h2>General input form</h2>
+    <h3>Captcha form</h3>
+    <form >
+        <fieldset>
+            <br>
+            <legend>Personal Details</legend>
+        <!-- for is used to link the label and input tag so that we can fill the form by clicking on the label -->
+        <label for="Captcha">Enter Captch: <span style="color: red;">*</span> </label>
+        <input type="text" id="Captcha" name="Captcha" placeholder="Enter captcha here" title="Enter captcha in 30 secs" required>
+        <br><br>
+        <label for="un">Enter username:</label>
+        <input type="text" id="un" name="username">
+        <br><br>
+        <label for="mail">Enter Email:</label>
+        <input type="email" id="mail" name="email">
+        <br><br>
+        <label for="Password">Enter Password:</label>
+        <input type="password" id="Password" name="Password" autocomplete="off"><!-- type should be password to mask the password that is to not show the password-->
+        <!-- autocomplete is used to off the suggestions -->
+        <br><br>
+        <label for="number">Enter Mobile number:</label>
+        <input type="tel" id="number" name="Mobile"><!-- tel is used to enter the telephone or mobile numbers as if we take the type as "number" if we want to include country code then it cant so we use tel-->
+        <br><br>
+        <label for="age">Enter Age:</label>
+        <input type="number" id="age" name="Age" min="1" max="200">
+        <br><br>
+        <label for="DOB">Enter DOB:</label>
+        <input type="date" id="DOB" name="DOB">
+        <br><br>
+        <label for="DOB">Enter DOB with time:</label>
+        <input type="datetime-local" id="DOB" name="DOB">
+        <br><br>
+        </fieldset>
+        <br><br>
+        <fieldset>
+            <br>
+            <legend>General details</legend>
+        <label for="time">Enter Chech-in time:</label>
+        <input type="time" id="time" name="time">
+        <br><br>
+        <label for="url">Enter Website url:</label>
+        <input type="url" id="url" name="url">
+        <br><br>
+        <label>
+            <input type="checkbox" name="op1" value="html"> HTML
+        </label>
+        <label>
+            <input type="checkbox" name="op2" value="css"> CSS
+        </label>
+        <label>
+            <input type="checkbox" name="op3" value="js"> JS
+        </label>
+        <!-- value attribute is mentioned to know what the answer stored in the name attribute -->
+         <br><br>
+        <label>Enter gender:</label>
+        <label>
+            <input type="radio" name="gender" value="M">Male<!-- here we have to give name attribute as same in both the options then only the radio button acts as single selector-->
+        </label>
+        <label>
+            <input type="radio" name="gender" value="F">Female
+        </label>
+        <br><br>
+        <label>Upload PAN card:</label>
+        <input type="file" accept=".pdf">
+        <br><br>
+        <label>Rate yourself in html:</label>
+        <input type="range" min="1" max="10" name="rating" value="1"> <!-- here value is used to start the range at a certain value-->
+        <br><br>
+        <label for="color">Choose your fav color:</label>
+        <select name="fav_color" id="color" size="3"><!--size is used to limit the options that are visible to the user-->
+            <option value="pink">Pink</option>
+            <option value="Black" selected>Black</option><!-- selected is used to display the first color in the dropdown box-->
+            <option value="White">White</option>
+            <option value="Blue">Blue</option>
+        </select>
+        <br><br>
+        </fieldset>
+        <br><br>
+        <label for="feedback">Enter feedback:</label>
+        <textarea name="feedback" id="feedback" rows="5" cols="50" placeholder="Enter your feedback here"></textarea>
+        <br><br>
+        
+        <button type="submit">Submit</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- space between the submit and reset button-->
+
+        <input type="reset" value="Cancel">
+        
+    </form>
+    
+</body>
+</html>
